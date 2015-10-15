@@ -5,3 +5,4 @@ AllCops:
     - 'config/**/*'
     - 'db/**'
     - 'Rakefile'
+    - 'Guardfile'

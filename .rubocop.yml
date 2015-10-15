@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+    - 'Gemfile'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**'
+    - 'Rakefile'

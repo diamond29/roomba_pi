@@ -4,7 +4,8 @@ rvm:
 script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
-- bundle exec rake test
+- bundle exec rake spec
+- bundle exec rubocop
 notifications:
   email:
     recipients:

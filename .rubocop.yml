@@ -6,3 +6,4 @@ AllCops:
     - 'db/**'
     - 'Rakefile'
     - 'Guardfile'
+    - 'vendor/**/*'

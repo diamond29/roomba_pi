@@ -12,3 +12,15 @@ notifications:
     - gregdiamond29@gmail.com
     on_success: change
     on_failure: always
+addons:
+  postgres: 9.4.1
+deploy:
+  provider: heroku
+  api_key:
+    secure: RP1G7PU53ReA7X4AtdtlFeETDc638vI2NxccmnVTgg4pxB5znD8FJ+O8xsSAKWTeHoDWRPWOkucvhTKV7GB06hG0JUBxXPeS+t09lMHGPjVQ90kh4oneMJzvQCkLKa7KLqivrHm/0GmpIu1DJTFzz29h1bVPTNKkz+UytonyLv9Z5MoCQ1qCqhvp39a1K4/xGM7fhVlvKEgTMyo9UILkFpKyQ21buaNUoXefOyrC70jyJiYEJj6Qs+Kms2MUL/2Gs/ixzJn0uAcLfGVFWXrCELbFf8cDf/1+ybTKtYi/2VsCt+/qDMiG/jx3emjH/sCA000HekbQ6xC3//7tuv4O8Zz3oGUYe2BtArUkDNxPmrlbAJL1CB0Jd2yIWV6S6XdabafQMQQeZT0SgsiTiQ02eyJgvMN86aBDFnwRE1qP7B/esv3L10jt20qCID/qzxrXM89D9X1/w9Hl5bFfT6w8ZtAqBmI/kcIiK0BsKoF8kqzf4utp74z7PJLx432Q655II4LUUrHmQFi65642lYlqWEj+JypGJcFqjD0pDR/AbNRWJlmim2Ky7tHSk3yy8jmEkWAxrT2kARipQm/uF4pViWlL0JC3W5SFqDbIAn+UU6co/aowOpP8pzOSPcvj2V8DcOS3XAoS2zTy70D0cniLegx+s5/9VcZsvk3fbll9Tuc=
+  app: roomba-pi
+  on:
+    repo: diamond29/roomba_pi
+  run:
+    - "rake db:migrate"
+    - restart

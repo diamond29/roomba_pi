@@ -7,3 +7,4 @@ AllCops:
     - 'Rakefile'
     - 'Guardfile'
     - 'vendor/**/*'
+  DisplayStyleGuide: true

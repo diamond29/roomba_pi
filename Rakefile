@@ -5,8 +5,9 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
-require 'rubocop/rake_task'
-
-RuboCop::RakeTask.new(:rubocop)
-
-task :default => [:rubocop]
+begin
+  require 'rubocop/rake_task'
+  RuboCop::RakeTask.new(:rubocop)
+  task :default => [:rubocop]
+rescue LoadError
+end

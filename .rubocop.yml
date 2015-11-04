@@ -1,10 +1,11 @@
 AllCops:
   Exclude:
-    - 'Gemfile'
+    - '**/Vagrantfile'
+    - '**/Gemfile'
     - 'bin/**/*'
     - 'config/**/*'
     - 'db/**'
-    - 'Rakefile'
-    - 'Guardfile'
+    - '**/Rakefile'
+    - '**/Guardfile'
     - 'vendor/**/*'
   DisplayStyleGuide: true

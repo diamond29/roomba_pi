@@ -2,9 +2,10 @@ language: ruby
 rvm:
   - 2.2.3
 script:
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
-  - bundle exec rake
+  - bin/rake db:create
+  - bin/rake db:migrate
+  - bin/rake ember:install
+  - bin/rake
 notifications:
   email:
     recipients:
@@ -21,5 +22,6 @@ deploy:
   on:
     repo: diamond29/roomba_pi
   run:
-    - "rake db:migrate"
+    - bin/rake db:migrate
+    - bin/rake ember:install
     - restart

@@ -25,5 +25,6 @@ deploy:
     repo: diamond29/roomba_pi
   run:
     - bin/rake db:migrate
-    - bin/rake ember:install
+    - npm install -g bower
+    - bundle exec rake ember:install
     - restart

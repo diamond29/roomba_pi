@@ -5,9 +5,8 @@ script:
   - bin/rake db:create
   - bin/rake db:migrate
   - nvm install 4.0
-  - nvm use 4.0
   - npm install -g bower
-  - bin/rake ember:install
+  - nvm use 4.0;bin/rake ember:install
   - bin/rake
 notifications:
   email:

@@ -1,14 +1,14 @@
 language: ruby
 rvm:
-- 2.2.2
+  - 2.2.3
 script:
-- bundle exec rake db:create
+  - bundle exec rake db:create
 - bundle exec rake db:migrate
 - bundle exec rake
 notifications:
   email:
     recipients:
-    - gregdiamond29@gmail.com
+      - gregdiamond29@gmail.com
     on_success: change
     on_failure: always
 addons:
